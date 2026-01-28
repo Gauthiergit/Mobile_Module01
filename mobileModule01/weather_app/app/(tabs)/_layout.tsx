@@ -1,12 +1,13 @@
 import { Colors, tintColor } from '@/constants/theme';
 import React from 'react';
-import { useColorScheme, View, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { useColorScheme } from 'react-native';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { withLayoutContext } from 'expo-router';
 import { SearchLocalisationProvider } from '@/providers/SearchLocalisationProvider';
 import { Header } from '@/components/Header';
 import { PlatformWrapper } from '@/wrappers/PlatformWrapper';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 export default function TabLayout() {
 
@@ -39,14 +40,14 @@ export default function TabLayout() {
 						name="today"
 						options={{
 							title: 'Today',
-							tabBarIcon: ({ color }: { color: string }) => <MaterialCommunityIcons name="weather-partly-cloudy" size={30} color={color} />,
+							tabBarIcon: ({ color }: { color: string }) => <FontAwesome5 name="calendar-day" size={30} color={color} />,
 						}}
 					/>
 					<MaterialTopTabs.Screen
 						name="weekly"
 						options={{
 							title: 'Weekly',
-							tabBarIcon: ({ color }: { color: string }) => <MaterialCommunityIcons name="weather-tornado" size={30} color={color} />,
+							tabBarIcon: ({ color }: { color: string }) => <FontAwesome5 name="calendar-week" size={30} color={color}/>,
 						}}
 					/>
 				</MaterialTopTabs>
