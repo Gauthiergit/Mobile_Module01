@@ -1,4 +1,4 @@
-import { Colors } from '@/constants/theme';
+import { Colors, tintColor } from '@/constants/theme';
 import { StyleSheet, Text, useColorScheme, type TextProps } from 'react-native';
 
 export type ThemedTextProps = TextProps & {
@@ -55,6 +55,6 @@ const styles = StyleSheet.create({
   link: {
     lineHeight: 30,
     fontSize: 16,
-    color: '#0a7ea4',
+    color: tintColor,
   },
 });
